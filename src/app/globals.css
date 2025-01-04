@@ -22,3 +22,11 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.home-item{
+  @apply absolute md:top-72 top-20 ml-10 md:ml-10 -translate-x-72 opacity-0
+}
+
+.item-p-1, .item-p-2, .item-p-3{
+  @apply opacity-10;
+}
