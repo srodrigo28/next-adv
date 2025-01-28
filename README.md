@@ -4,3 +4,7 @@
 
 ### Dependências
 npm install gsap
+
+
+#### Ref.
+https://www.youtube.com/watch?v=fdLyK-oFAyQ

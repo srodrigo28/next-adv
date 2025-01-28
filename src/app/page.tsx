@@ -1,4 +1,5 @@
 'use client'
+import { motion } from "framer-motion";
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { useLayoutEffect } from "react";
@@ -38,25 +39,46 @@ export default function Home() {
         </header>
 
         <article className="flex flex-col items-center md:flex-row gap-2 bg-zinc-900 w-screen h-[80vh] p-10 md:0">
-          <article className="flex-1 md:p-8 flex items-center md:flex-col">
+          
+          <motion.div
+            className="flex-1 md:p-8 flex items-center md:flex-col"
+            initial={{ opacity: 0, x: -100 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: -100 }}
+            transition={{ duration: 0.8 }}
+          >
               <img className="self-center item-p-1 md:mr-5" src="image/icon-balanca.png" width={100} alt="" />
               <h2 className="text-white mb-5">1º Passo</h2>
               <p className="text-white">Agenda uma consulta com nossos advogados especialistas e faça uma análise gratuita 
-                do seu contrato.</p>   
-
-          </article>
-          <article className="flex-1 md:p-8 items-center flex md:flex-col bg-zinc-900">    
+                do seu contrato.</p>
+          </motion.div>
+          
+          <motion.div
+            className="flex-1 md:p-8 flex items-center md:flex-col"
+            initial={{ opacity: 0, y: -100 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -100 }}
+            transition={{ duration: 0.8 }}
+          >
               <img className="self-center item-p-2" src="image/icone-money.png" width={100} alt="" />
               <h2 className="text-white mb-5">2º Passo</h2>
               <p className="text-white">Agenda uma consulta com nossos advogados especialistas e faça uma análise gratuita 
                 do seu contrato.</p>
-          </article>
-          <article className="flex-1 md:p-8 items-center flex md:flex-col bg-zinc-900">
+            </motion.div>
+
+            <motion.div
+            className="flex-1 md:p-8 flex items-center md:flex-col"
+            initial={{ opacity: 0, x: 100 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: 100 }}
+            transition={{ duration: 0.8 }}
+          >
             <img className="self-center item-p-3" src="image/icon-arrow.png" width={100} alt="" />
               <h2 className="text-white mb-5">3º Passo</h2>
               <p className="text-white">Agenda uma consulta com nossos advogados especialistas e faça uma análise gratuita 
                 do seu contrato.</p>
-          </article>
+          </motion.div>
+
         </article>
       </section>
     </div>
