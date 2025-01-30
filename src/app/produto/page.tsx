@@ -1,10 +1,12 @@
 import { Input } from "@/Components/Input";
-import { div } from "framer-motion/client";
 
 export default function Produto(){
     return(
         <div>
-            <Input placeholder="Digite o nome" />
+            <Input placeholder="Digite o nome" 
+                className="w-44 font-light bg-zinc-800
+                text-white tracking-widest
+            "/>
         </div>
     )
 }
